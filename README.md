@@ -9,5 +9,5 @@ run alien_invaders.py
 Controls:  
 Arrow left/right = Move ship left/right   
 Spacebar         = Shoot bullet   
-Escape           = close game
+Escape           = Close game
 
