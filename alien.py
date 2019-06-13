@@ -1,5 +1,6 @@
 import pygame
 from pygame.sprite import Sprite
+from random import randint
 
 
 class Alien(Sprite):
@@ -12,7 +13,7 @@ class Alien(Sprite):
         self.game_settings = game_settings
 
         # Load alien image and set its rect attribute.
-        self.image = pygame.image.load('images/alien.bmp')
+        self.image = pygame.image.load(self.get_alien_path())
         self.rect = self.image.get_rect()
 
         # Start each new alien at the top left of screen
@@ -21,6 +22,11 @@ class Alien(Sprite):
 
         # Store alien's exact position
         self.x = float(self.rect.x)
+
+    def get_alien_path(self):
+        """Get path to alien image"""
+        alien_path = 'images/alien' + str(randint(0, 4)) +'.png'
+        return alien_path
 
     def blitme(self):
         """Draw alien at its current position."""
