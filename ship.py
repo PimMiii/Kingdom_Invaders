@@ -11,8 +11,6 @@ class Ship(Sprite):
         self.game_settings = game_settings
 
         # Load the ship image and get its rect.
-        # TODO check legacy_flag for legacy ship
-        # TODO create get_ship_path() , akin to get_alien_path
         self.image = pygame.image.load(self.get_ship_path(game_settings))
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
