@@ -2,7 +2,7 @@
 Adaptation of Project 1; Alien Invasion   
 From the Python Crash Course book.
 
-to run:  
+To run:  
 have python(3.7) and pygame installed  
 run alien_invaders.py  
   
