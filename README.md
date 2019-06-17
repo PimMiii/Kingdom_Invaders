@@ -7,7 +7,14 @@ have python(3.7) and pygame installed
 run alien_invaders.py  
   
 Controls:  
-Arrow left/right = Move ship left/right   
+Arrow left/right = Move ship left/right  
+A / D  = Move ship left/right  
 Spacebar         = Shoot bullet   
-Escape           = Close game
+Escape           = Close game  
+    
+   
+ To turn on legacy mode:  
+ in game_settings.py, legacy_flag = True  
+ To turn off legacy mode:  
+ in game_settings.py, legacy_flag = False 
 

@@ -9,6 +9,8 @@ class Bullet(Sprite):
         self.screen = screen
 
         # Create a bullet rect at (0,0) and then set correct position.
+        # TODO check legacy_flag for legacy bullet path
+        # TODO create get_bullet_path(), akin get_alien_path
         self.rect = pygame.Rect(0, 0, game_settings.bullet_width,
                                 game_settings.bullet_height)
         self.rect.centerx = ship.rect.centerx

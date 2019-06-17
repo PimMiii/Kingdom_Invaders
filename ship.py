@@ -11,7 +11,9 @@ class Ship(Sprite):
         self.game_settings = game_settings
 
         # Load the ship image and get its rect.
-        self.image = pygame.image.load('images/ship.bmp')
+        # TODO check legacy_flag for legacy ship
+        # TODO create get_ship_path() , akin to get_alien_path
+        self.image = pygame.image.load(self.get_ship_path(game_settings))
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 
@@ -25,6 +27,14 @@ class Ship(Sprite):
         # Movement flags
         self.moving_right = False
         self.moving_left = False
+
+    def get_ship_path(self, game_settings):
+        """Get the path to the ship.png image."""
+        if game_settings.legacy_flag:
+            ship_path = 'images/ship0.png'
+        else:
+            ship_path = 'images/ship1.png'
+        return ship_path
 
     def update(self):
         """Update the ship's position based on the movement flag"""

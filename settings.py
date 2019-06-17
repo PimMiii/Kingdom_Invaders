@@ -25,6 +25,9 @@ class Settings:
         # How quickly the score increases
         self.score_scale = 1.5
 
+        # Legacy flag
+        self.legacy_flag = False
+
         self.initialize_dynamic_settings()
 
     def initialize_dynamic_settings(self):
