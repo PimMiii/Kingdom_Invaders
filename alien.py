@@ -25,7 +25,6 @@ class Alien(Sprite):
 
     def get_alien_path(self, game_settings):
         """Get path to alien image"""
-        # TODO check legacy_flag for legacy alien
         if game_settings.legacy_flag:
             alien_path = 'images/alien0.png'
         else:
