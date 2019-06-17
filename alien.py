@@ -13,7 +13,7 @@ class Alien(Sprite):
         self.game_settings = game_settings
 
         # Load alien image and set its rect attribute.
-        self.image = pygame.image.load(self.get_alien_path())
+        self.image = pygame.image.load(self.get_alien_path(game_settings))
         self.rect = self.image.get_rect()
 
         # Start each new alien at the top left of screen
@@ -23,10 +23,13 @@ class Alien(Sprite):
         # Store alien's exact position
         self.x = float(self.rect.x)
 
-    def get_alien_path(self):
+    def get_alien_path(self, game_settings):
         """Get path to alien image"""
         # TODO check legacy_flag for legacy alien
-        alien_path = 'images/alien' + str(randint(0, 4)) +'.png'
+        if game_settings.legacy_flag:
+            alien_path = 'images/alien0.png'
+        else:
+            alien_path = 'images/alien' + str(randint(0, 4)) +'.png'
         return alien_path
 
     def blitme(self):

@@ -26,7 +26,7 @@ class Settings:
         self.score_scale = 1.5
 
         # Legacy flag
-        self.legacy_flag = True
+        self.legacy_flag = False
 
         self.initialize_dynamic_settings()
 
