@@ -27,7 +27,7 @@ class Settings:
 
         # game Options
         self.legacy_flag = False
-        self.no_background = True
+        self.no_background = False
 
         self.initialize_dynamic_settings()
 
