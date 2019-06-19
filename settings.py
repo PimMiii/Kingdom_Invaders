@@ -28,6 +28,7 @@ class Settings:
         # game Options
         self.legacy_flag = False
         self.no_background = False
+        self.emote_aliens = True
 
         self.initialize_dynamic_settings()
 

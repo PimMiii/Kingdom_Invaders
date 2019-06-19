@@ -14,8 +14,9 @@ Escape           = Close game
     
    
  Game options in game_settings.py:  
- 29| legacy_flag True/False : Toggles legacy mode.  
- 30| no_background True/False : Toggles displaying of background image.  
+ 29| legacy_flag True/False : Toggle legacy mode.  
+ 30| no_background True/False : Toggle displaying of background image.  
+ 31| emote_aliens True/False : Toggle between emote aliens and coloured legacy aliens   
    
  
 
