@@ -14,7 +14,7 @@ Escape           = Close game
     
    
  Game options in game_settings.py:  
- 29| legacy_flag True/False : Toggles legacy mode.
+ 29| legacy_flag True/False : Toggles legacy mode.  
  30| no_background True/False : Toggles displaying of background image.  
    
  
