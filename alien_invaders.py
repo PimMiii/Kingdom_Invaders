@@ -2,20 +2,21 @@ import pygame
 from pygame.sprite import Group
 
 from settings import Settings
+from background import Background
 from game_stats import GameStats
 from scoreboard import Scoreboard
 from button import Button
 from ship import Ship
 import game_functions as gf
+import window
 
 
 def run_game():
     # Initialize game and create screen object.
     pygame.init()
     game_settings = Settings()
-    screen = pygame.display.set_mode((game_settings.screen_width,
-                                      game_settings.screen_height))
-    pygame.display.set_caption("Alien Invaders")
+    screen = window.window_set_mode(game_settings)
+    bg = Background()
 
     # Make the play button.
     play_button = Button(game_settings, screen, "Play")
@@ -43,7 +44,7 @@ def run_game():
             gf.update_aliens(game_settings, screen, stats, sb, ship, aliens,
                              bullets)
 
-        gf.update_screen(game_settings, screen, stats, sb, ship, aliens,
+        gf.update_screen(game_settings, screen, bg, stats, sb, ship, aliens,
                          bullets, play_button)
 
 

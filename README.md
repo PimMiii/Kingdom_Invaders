@@ -13,8 +13,9 @@ Spacebar         = Shoot bullet
 Escape           = Close game  
     
    
- To turn on legacy mode:  
- in game_settings.py, legacy_flag = True  
- To turn off legacy mode:  
- in game_settings.py, legacy_flag = False 
+ Game options in game_settings.py:  
+ 29| legacy_flag True/False : Toggles legacy mode.
+ 30| no_background True/False : Toggles displaying of background image.  
+   
+ 
 
