@@ -27,8 +27,10 @@ class Alien(Sprite):
         """Get path to alien image"""
         if game_settings.legacy_flag:
             alien_path = 'images/alien0.png'
+        elif game_settings.emote_aliens:
+            alien_path = 'images/alien' + str(randint(5, 11)) +'.png'
         else:
-            alien_path = 'images/alien' + str(randint(0, 4)) +'.png'
+            alien_path = 'images/alien' + str(randint(0, 4)) + '.png'
         return alien_path
 
     def blitme(self):
