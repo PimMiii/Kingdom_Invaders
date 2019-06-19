@@ -25,8 +25,9 @@ class Settings:
         # How quickly the score increases
         self.score_scale = 1.5
 
-        # Legacy flag
+        # game Options
         self.legacy_flag = False
+        self.no_background = True
 
         self.initialize_dynamic_settings()
 
