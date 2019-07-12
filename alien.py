@@ -6,14 +6,15 @@ from random import randint
 class Alien(Sprite):
     """A class to represent a single alien in the fleet"""
 
-    def __init__(self, game_settings, screen):
+    def __init__(self, game_settings, game_surfaces, screen):
         """Initialize the alien and its starting position."""
         super(Alien, self).__init__()
         self.screen = screen
         self.game_settings = game_settings
+        self.game_surfaces = game_surfaces
 
         # Load alien image and set its rect attribute.
-        self.image = pygame.image.load(self.get_alien_path(game_settings))
+        self.image = self.get_alien_surface(game_settings, game_surfaces)
         self.rect = self.image.get_rect()
 
         # Start each new alien at the top left of screen
@@ -23,15 +24,15 @@ class Alien(Sprite):
         # Store alien's exact position
         self.x = float(self.rect.x)
 
-    def get_alien_path(self, game_settings):
-        """Get path to alien image"""
+    def get_alien_surface(self, game_settings, game_surfaces):
+        """Get alien's surface"""
         if game_settings.legacy_flag:
-            alien_path = 'images/alien0.png'
+            alien_surface = game_surfaces.alien_surfaces[0]
         elif game_settings.emote_aliens:
-            alien_path = 'images/alien' + str(randint(5, 11)) +'.png'
+            alien_surface = game_surfaces.alien_surfaces[randint(5, 11)]
         else:
-            alien_path = 'images/alien' + str(randint(0, 4)) + '.png'
-        return alien_path
+            alien_surface = game_surfaces.alien_surfaces[randint(0, 4)]
+        return alien_surface
 
     def blitme(self):
         """Draw alien at its current position."""
